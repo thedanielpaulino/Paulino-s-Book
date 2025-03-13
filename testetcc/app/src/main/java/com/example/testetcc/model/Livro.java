@@ -12,7 +12,7 @@ public class Livro {
 
     public Livro(String escritor, String sinopse, String titulo, String idioma) {
         this.escritor = escritor;
-        this.sinopse = this.sinopse;
+        this.sinopse = sinopse;
         this.titulo = titulo;
         this.idioma = idioma;
     }
