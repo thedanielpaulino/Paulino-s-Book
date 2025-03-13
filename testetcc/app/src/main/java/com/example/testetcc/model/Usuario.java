@@ -6,15 +6,24 @@ import androidx.room.PrimaryKey;
 public class Usuario {
     @PrimaryKey(autoGenerate = true)
     private int id;
- private String apelido;
+ private String nome;
  private String email;
-
+    private String username;
  private String senha;
 
-    public Usuario(String apelido, String email, String senha) {
-        this.apelido = apelido;
+    public Usuario(String nome, String email, String senha, String username) {
+        this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getId() {
@@ -25,12 +34,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getApelido() {
-        return apelido;
+    public String getNome() {
+        return nome;
     }
 
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSenha() {
