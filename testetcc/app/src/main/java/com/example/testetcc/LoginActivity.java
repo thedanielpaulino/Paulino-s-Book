@@ -30,13 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         btnCadastro = findViewById(R.id.btnCadastro);
         db = AppDatabase.getInstance(this);
 
-        // Lógica para login
+        //  Botões login
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = etEmail.getText().toString();  // Email do usuário
                 String senha = etSenha.getText().toString();  // Senha do usuário
-
+                //Mensagem de erro
                 if (email.isEmpty() || senha.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
                     return;
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // Lógica para cadastro
+        //  Cadastro
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
