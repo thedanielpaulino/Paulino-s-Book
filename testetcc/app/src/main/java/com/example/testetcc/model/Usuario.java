@@ -1,29 +1,22 @@
 package com.example.testetcc.model;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "usuarios")
-public class Usuario {
+    @Entity(tableName = "usuarios")
+            public class Usuario {
     @PrimaryKey(autoGenerate = true)
-    private int id;
- private String nome;
- private String email;
-    private String username;
- private String senha;
-
-    public Usuario(String nome, String email, String senha, String username) {
-        this.nome = nome;
+            private int id;
+    @ColumnInfo(name = "apelido")
+            private String apelido;
+    @ColumnInfo(name = "email")
+            private String email;
+    @ColumnInfo(name = "senha")
+            private String senha;
+    public Usuario(String apelido, String email, String senha) {
+        this.apelido = apelido;
         this.email = email;
         this.senha = senha;
-        this.username = username;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public int getId() {
@@ -34,12 +27,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getApelido() {
+        return apelido;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
     }
 
     public String getSenha() {
