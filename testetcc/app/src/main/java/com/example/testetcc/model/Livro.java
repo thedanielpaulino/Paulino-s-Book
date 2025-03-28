@@ -20,7 +20,7 @@ import androidx.room.PrimaryKey;
         this.titulo = titulo;
         this.idioma = idioma;
     }
-
+    //Getters e Setters
     public String getEscritor() {
         return escritor;
     }
