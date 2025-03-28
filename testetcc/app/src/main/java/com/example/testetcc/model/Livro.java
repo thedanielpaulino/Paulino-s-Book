@@ -1,18 +1,22 @@
 package com.example.testetcc.model;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-@Entity(tableName = "livro")
-public class Livro {
+    @Entity(tableName = "livro")
+        public class Livro {
     @PrimaryKey(autoGenerate = true)
-    private int idlivro;
-    private String escritor;
-    private String sinopse;
-    private String titulo;
-    private String idioma;
-
-    public Livro(String escritor, String sinopse, String titulo, String idioma) {
+            private int id_livro;
+    @ColumnInfo(name = "escritor")
+        private String escritor;
+    @ColumnInfo(name = "tema")
+        private String tema;
+    @ColumnInfo(name = "titulo")
+        private String titulo;
+    @ColumnInfo(name = "idioma")
+        private String idioma;
+    public Livro(String escritor, String tema, String titulo, String idioma) {
         this.escritor = escritor;
-        this.sinopse = sinopse;
+        this.tema = tema;
         this.titulo = titulo;
         this.idioma = idioma;
     }
@@ -25,20 +29,20 @@ public class Livro {
         this.escritor = escritor;
     }
 
-    public int getIdlivro() {
-        return idlivro;
+    public int getId_livro() {
+        return id_livro;
     }
 
-    public void setIdlivro(int idlivro) {
-        this.idlivro = idlivro;
+    public void setId_livro(int id_livro) {
+        this.id_livro = id_livro;
     }
 
-    public String getSinopse() {
-        return sinopse;
+    public String getTema() {
+        return tema;
     }
 
-    public void setSinopse(String sinopse) {
-        this.sinopse = sinopse;
+    public void setTema(String tema) {
+        this.tema = tema;
     }
 
     public String getTitulo() {
