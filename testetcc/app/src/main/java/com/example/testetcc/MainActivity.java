@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         tvBemVindo = findViewById(R.id.tvBemVindo);
         btnSair = findViewById(R.id.btnSair);
 
-        // Receber o nome do usuário, enviado do LoginActivity após o login
+        // Recebe o nome do usuário, enviado do LoginActivity após o login
         usuarioNome = getIntent().getStringExtra("usuario_nome");
         if (usuarioNome != null) {
             tvBemVindo.setText("Bem-vindo, " + usuarioNome + "!");
         }
 
-        // Lógica do botão Sair
+        //  Botão Sair
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +39,5 @@ public class MainActivity extends AppCompatActivity {
                 finish(); // Fecha a MainActivity
             }
         });
-
-        // Outros elementos e funcionalidades da MainActivity podem ser adicionados aqui, como listas, botões, etc.
     }
 }
