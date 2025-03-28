@@ -15,7 +15,7 @@ import com.example.testetcc.model.Usuario;
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instancia;
 
-    public abstract UsuarioDAO usuarioDao();
+    public abstract UsuarioDAO usuarioDao(); // Adicionando DAO do usuario
     public abstract LivroDAO livroDao(); // Adicionando DAO do Livro
 
     public static synchronized AppDatabase getInstance(Context context) {
