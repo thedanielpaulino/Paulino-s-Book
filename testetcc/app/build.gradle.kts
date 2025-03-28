@@ -4,15 +4,14 @@ plugins {
 
 android {
     namespace = "com.example.testetcc"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.testetcc"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -25,29 +24,38 @@ android {
             )
         }
     }
+
+    viewBinding {
+        enable = true
+    }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
- dependencies {
-        implementation(libs.appcompat)
-        implementation(libs.material)
-        implementation(libs.activity)
-        implementation(libs.constraintlayout)
-        testImplementation(libs.junit)
-        androidTestImplementation(libs.ext.junit)
-        androidTestImplementation(libs.espresso.core)
 
-        // Dependências do Room
-        val roomVersion = "2.6.1"
+dependencies {
+    // Room
+    implementation("androidx.room:room-runtime:${libs.versions.room.get()}")
+    annotationProcessor("androidx.room:room-compiler:${libs.versions.room.get()}")
 
-        implementation("androidx.room:room-runtime:$roomVersion")
-        annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    // Use as versões do libs.versions.toml
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.activity)
 
-        // Se estiver usando Kotlin KSP (ignorar se for só Java)
-        // ksp("androidx.room:room-compiler:$roomVersion")
-
-        // Para suportar RxJava (opcional)
-        implementation("androidx.room:room-rxjava3:$roomVersion")
-    }
+    // Testes
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    configurations.all {
+        resolutionStrategy {
+            force ("androidx.annotation:annotation:1.6.0")
+            force ("androidx.arch.core:core-common:2.2.0")
+            force ("androidx.lifecycle:lifecycle-livedata:2.7.0")
+            force ("androidx.room:room-runtime:2.6.1")
+        }
+    }}
