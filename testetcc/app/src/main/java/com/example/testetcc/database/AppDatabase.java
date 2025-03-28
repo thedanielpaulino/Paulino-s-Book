@@ -1,6 +1,7 @@
 package com.example.testetcc.database;
 
 import android.content.Context;
+import androidx.lifecycle.ViewModel;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 import androidx.room.Room;
@@ -10,7 +11,7 @@ import com.example.testetcc.interfaces.UsuarioDAO;
 import com.example.testetcc.model.Livro;
 import com.example.testetcc.model.Usuario;
 
-@Database(entities = {Usuario.class, Livro.class}, version = 2) // 🚨 Alterando a versão do banco!
+@Database(entities = {Usuario.class, Livro.class}, version = 2,exportSchema = true) 
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instancia;
 
@@ -22,7 +23,6 @@ public abstract class AppDatabase extends RoomDatabase {
             instancia = Room.databaseBuilder(context.getApplicationContext(),
                             AppDatabase.class, "paulinosbook.db")
                     .fallbackToDestructiveMigration() // Permite recriar DB ao mudar versão
-                    .allowMainThreadQueries() // NÃO recomendado para produção
                     .build();
         }
         return instancia;
