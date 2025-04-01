@@ -1,50 +1,48 @@
 📚 LibrumXP:
 
-LibrumXP é um aplicativo mobile desenvolvido como Trabalho de Conclusão de Curso (TCC) com o objetivo de incentivar a leitura em um mundo repleto de distrações digitais. A plataforma oferece uma seleção gratuita de livros para download e, futuramente, contará com uma versão premium que expandirá ainda mais a biblioteca disponível.
+O LibrumXP é um aplicativo mobile desenvolvido como Trabalho de Conclusão de Curso (TCC) com o objetivo de incentivar a leitura em um mundo repleto de distrações digitais. A plataforma oferecerá uma seleção gratuita de livros para download e, futuramente, contará com uma versão premium que expandirá ainda mais a biblioteca disponível.
 
 🌟 Objetivo:
 
 Nosso objetivo é criar uma ferramenta que auxilie os usuários a manterem o hábito da leitura através de notificações periódicas, acompanhamento de progresso e uma biblioteca acessível de livros digitais.
 
-🏗 Principais Funcionalidades:
+📝 Principais Funcionalidades:
 
-Receber notificações periódicas incentivando a leitura.
+Receber notificações periódicas incentivando a leitura;
 
-Armazenar um histórico das mensagens enviadas.
+Armazenar um histórico das mensagens enviadas;
 
-Cadastrar-se na plataforma e gerenciar informações essenciais (nome, e-mail, senha criptografada, tipo de assinatura).
+Cadastrar-se na plataforma e gerenciar informações essenciais (nome, e-mail, senha criptografada, tipo de assinatura);
 
-Acompanhar o progresso de leitura, registrando quais livros estão sendo lidos, a porcentagem concluída e a data da última leitura.
+Acompanhar o progresso de leitura, registrando quais livros estão sendo lidos, a porcentagem concluída e a data da última leitura;
 
-Acessar uma biblioteca com livros gratuitos e, no futuro, uma seleção premium para assinantes.
+Acessar uma biblioteca com livros gratuitos e, no futuro, uma seleção premium para assinantes;
 
-🚀 Funcionalidades Futuras:
+🏁 Funcionalidades Futuras:
 
-Para aprimorar a experiência do usuário, planejamos implementar:
+Estatísticas personalizadas de leitura;
 
-Estatísticas personalizadas de leitura.
+Gamificação com badges por metas alcançadas;
 
-Gamificação com badges por metas alcançadas.
+Interação entre leitores;
 
-Interação entre leitores.
+🛠 Tecnologias Utilizadas:
 
-🛠 Tecnologias Utilizadas
+Linguagem: Java;
 
-Linguagem: Java
+Banco de Dados: Room Jetpack com SQLite;
 
-Banco de Dados: SQLite
+Versionamento: Git/GitHub;
 
-Versionamento: Git/GitHub
+📍 Como Executar o Projeto
 
-📌 Como Executar o Projeto
+Para clonar este repositório:
 
-Clone este repositório:
+git clone https://github.com/seu-usuario/librumxp.git;
 
-git clone https://github.com/seu-usuario/librumxp.git
+Abra o projeto no Android Studio;
 
-Abra o projeto no Android Studio.
-
-Compile e execute o aplicativo em um emulador ou dispositivo físico.
+Compile e execute o aplicativo em um emulador ou dispositivo físico;
 
 📄 Licença
 
