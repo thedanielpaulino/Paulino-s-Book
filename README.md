@@ -48,5 +48,5 @@ Compile e execute o aplicativo em um emulador ou dispositivo físico;
 
 Este projeto está sob a licença MIT.
 
-👨‍💻 Desenvolvido por Diego Ramon, Daniel Paulino, Carlos Daniel e Melissa Bernardo.
+👨‍💻 Desenvolvido por Diego Ramon, Daniel Paulino, Carlos Daniel e Melissa.
 
